@@ -34,7 +34,7 @@ app.get('/user-info/:id', (req, res) => {
     email: student.email,
     id: student.id  
   });
-}); .
+}); 
 
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
