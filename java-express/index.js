@@ -22,5 +22,6 @@ const students = [
 
   app.get('/user-info/:id'), (req, res) => {
   const studentId = parseInt(req.params.id);   
+
 }  
 
