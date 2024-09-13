@@ -15,7 +15,12 @@ const students = [
     name: "Daniel",           
     lastName: "Forero",     
     email: "danielforsa@unisabana.edu.co",  
-    id: ""         
+    id: "0000309277"   
+        
   }
 ];
+
+  app.get('/user-info/:id'), (req, res) => {
+  const studentId = parseInt(req.params.id);   
+}  
 
