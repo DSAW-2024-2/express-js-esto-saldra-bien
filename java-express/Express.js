@@ -20,15 +20,15 @@ const students = [
 ];
 
 app.get('/user-info/:id', (req, res) => {
-  const studentId = parseInt(req.params.id, 10);  // Asegúrate de especificar la base (10) para parseInt
+  const studentId = parseInt(req.params.id);
 
-  if (isNaN(studentId)) {  // Verifica si studentId es un número válido
-    return res.status(400).json({ error: "ID de estudiante inválido" });
+  if (isNaN(studentId)) {
+    return res.status(400).json({ error: "ID inválido" });
   }
 
   const student = students.find(s => s.id === studentId);
 
-  if (!student) {  
+  if (!student) {
     return res.status(404).json({ error: "Estudiante no encontrado" });
   }
 
@@ -38,7 +38,7 @@ app.get('/user-info/:id', (req, res) => {
     email: student.email,
     id: student.id  
   });
-}); 
+});
 
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
