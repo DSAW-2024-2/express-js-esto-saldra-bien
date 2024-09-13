@@ -20,7 +20,11 @@ const students = [
 ];
 
 app.get('/user-info/:id', (req, res) => {
-  const studentId = parseInt(req.params.id);  
+  const studentId = parseInt(req.params.id, 10);  // Asegúrate de especificar la base (10) para parseInt
+
+  if (isNaN(studentId)) {  // Verifica si studentId es un número válido
+    return res.status(400).json({ error: "ID de estudiante inválido" });
+  }
 
   const student = students.find(s => s.id === studentId);
 
