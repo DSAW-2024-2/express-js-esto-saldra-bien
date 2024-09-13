@@ -12,9 +12,9 @@ const students = [
   },
   {
     id: 2,
-    name: "",           
-    lastName: "",     
-    email: "",  
+    name: "Daniel",           
+    lastName: "Forero",     
+    email: "danielforsa@unisabana.edu.co",  
     id: ""         
   }
 ];
